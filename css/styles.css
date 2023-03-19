@@ -10,50 +10,56 @@
 :root {
     --primary-text-color: #434455;
     --accent-text-color: #2E2F42;
-    ;
     --accent: #4D5AE5;
-    --soft-white:#F4F4FD;
-    --pure-wite: #fff
+    --soft-white: #F4F4FD;
+    --pure-wite: #fff;
+    --almost-white: #F5F5F5;
+    --blue: #404bbf;
+    --footer-text: #E7E9FC;
 }
 
 body {
-    background-color: var(--soft-white);
+    background-color: var(--pure-wite);
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;
     letter-spacing: 0.02em;
 }
-header{
+
+header {
     background-color: var(--pure-wite);
 }
+
 .link {
     text-decoration: none;
 }
-.logo-web {
-    color: var(--accent);
-    font-family: Raleway, serif;
 
-    
+/*new code*/
+.link-webstudio {
+    color: var(--accent);
+    font-family: Raleway, sans-serif;
+
+
     font-weight: 800;
     font-size: 18px;
-    line-height: 1,17px;
+    line-height: 1.17;
 
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+
+.nav-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--accent-text-color);
+}
+
 .logo-studio {
     color: var(--accent-text-color);
-    font-family: Raleway, serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1,17;
 
-    letter-spacing: 0.03em;
-    text-transform: uppercase;} 
-
-
-nav > a.link-webstudio:hover {
-    color: red;
 }
+
 
 
 .list {
@@ -62,67 +68,71 @@ nav > a.link-webstudio:hover {
 
 /*----navigation----*/
 
-.site-nav .link {
-    color: var(--accent-text-color);
-    
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1,5;
-}
-.site-nav .link:hover,
-.site-nav .link:focus {
-    color: var(--accent);
+
+.nav-header:hover,
+.nav-header:focus {
+    color: var(--blue);
 }
 
 
 .auth-nav {
     color: var(--primary-text-color);
     font-style: normal;
-    
+
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 1.5;
 
 }
+
+.auth-nav-list {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+
+}
+
 .auth-nav .link:hover {
-    color: var(--accent-text-color);
-    font-style: normal;
-    
-    font-size: 16px;
-    line-height: 1,5;
-
+    color: var(--blue)
 }
-.auth-nav .link:focus {
-    color: var(--accent-text-color);
-    font-style: normal;
-    
-    font-size: 16px;
-    line-height: 1,5;
 
+.auth-nav-list:focus {
+    color: var(--blue)
 }
+
 /*-----hero-----*/
 
 .hero {
     background-color: var(--accent-text-color);
 }
+
 .hero-title {
-    color: var(--pure-wite);  
+    color: var(--pure-wite);
 
     font-weight: 700;
     font-size: 56px;
-    line-height: 1,07;
     text-align: center;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
 }
+
 .hero-button {
-    color: #fff;
+    font-family: "Roboto", sans-serif;
+    color: var(--pure-wite);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     align-items: center;
 
-    background-color: #4D5AE5;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    background-color: var(--accent);
     cursor: pointer;
+
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--blue)
 }
 
 /*----sections and titles----*/
@@ -131,135 +141,152 @@ nav > a.link-webstudio:hover {
 
 .advantages-title {
     color: var(--accent-text-color);
-    
+
+
 }
 
 .advantages-title-small {
     color: var(--accent-text-color);
     font-weight: 500;
     font-size: 20px;
-    line-height: 1,2;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 
 }
 
 .advantages-text {
     color: var(--primary-text-color);
-    
+
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 1.5;
 }
 
 /*----works----*/
-.works {
-    background-color: #F5F5F5;
-}
+
 .works-title {
     color: var(--accent-text-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: 1,11;
+    line-height: 1.11;
     text-align: center;
+    text-transform: capitalize;
 }
 
 /*---team-----*/
 
 .team {
-    background-color: var(--milk-wite);
+    background-color: var(--soft-white);
 }
+
+.team-persons {
+    background-color: var(--pure-wite);
+}
+
 .team-title {
     color: var(--accent-text-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: 1,11;
+    line-height: 1.11;
     text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+
+
 }
 
 .team-title-small {
     color: var(--accent-text-color);
     font-weight: 500;
     font-size: 20px;
-    line-height: 1,2;
+    line-height: 1.2;
     text-align: center;
-
+    letter-spacing: 0.02em;
 }
 
 .team-text {
     color: var(--primary-text-color);
-    
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 1.5;
     text-align: center;
 }
 
 .footer {
-background-color: var(--accent-text-color);
+    background-color: var(--accent-text-color);
 }
+
+.footer-logo {
+    color: var(--accent);
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
 .footer-text {
-    color: var(--soft-white);
+    color: var(--footer-text);
+    font-weight: 400;
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 24px;
+
 }
 
 .logo-studio-footer {
     color: var(--soft-white);
-        font-family: Raleway, serif;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1, 17;
-    
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
 }
- /*-----button---*/
- .button {
+
+/*-----button---*/
+.button {
     color: var(--pure-wite);
     background-color: var(--accent);
     cursor: pointer;
- }
+}
 
- .button:hover {
-    color: var(--accent);
-    background-color: var(--milk-wite);
-
- }
- /*-----PORTFOLIO----*/
-
- .nav-button {
+.button:hover {
     color: var(--accent);
     background-color: var(--soft-white);
+
+}
+
+/*-----PORTFOLIO----*/
+
+
+.nav-button {
+    color: var(--accent);
+    font-family: "Roboto", sans-serif;
+
+    background-color: var(--soft-white);
     font-weight: 500;
-    font-size: 16 px;
-    line-height: 1,5;
-    letter-spacing: 0,04em;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     text-align: center;
     cursor: pointer;
-    
- }
- .nav-button:hover {
+
+}
+
+.nav-button:hover,
+.nav-button:focus {
     color: var(--pure-wite);
-    background-color: var(--accent-text-color);
- }
- .gallery-title {
-    color: var(--accent-text-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1,11;
-    text-align: center;
- }
- .gallery-titile-small {
+    background-color: var(--blue);
+}
+
+
+.gallery-titile-small {
     color: var(--accent-text-color);
     font-weight: 500;
     font-size: 20px;
-    line-height: 1,2;
-    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 
- }
- .gallery-text {
+}
+
+.gallery-text {
     color: var(--primary-text-color);
-    
-    font-size: 16px;
-    line-height: 1,5;
-    text-align: center;
-    }
 
- 
+    font-size: 16px;
+    line-height: 1.5;
+
+}
