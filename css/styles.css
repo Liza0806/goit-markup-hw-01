@@ -16,6 +16,11 @@
     --almost-white: #F5F5F5;
     --blue: #404bbf;
     --footer-text: #E7E9FC;
+    --bg-gradient: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+    --green: #31D0AA;
+    --icon-cust: #8E8F99;
+
+    
 }
 
 body {
@@ -45,6 +50,7 @@ header {
 
 .link {
     text-decoration: none;
+    
 }
 
 /*new code*/
@@ -107,9 +113,7 @@ ul.site-nav {
 }
 /*----navigation----*/
 
-header {
-   
-}
+
 .cont-header {
     display: flex;
     align-items: center;
@@ -165,7 +169,8 @@ padding: 0;
 
 }
 
-.auth-nav .link:hover {
+.auth-nav .link:hover,
+.auth-nav .link:focus {
     color: var(--blue)
 }
 
@@ -180,6 +185,15 @@ padding: 0;
     
     padding-top: 188px;
     padding-bottom: 188px;
+    background: var(--bg-gradient), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    
+    padding: 188px 472px;
+    max-width: 1440px;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto 0 auto;
+
 }
 
 .hero-title {
@@ -263,7 +277,8 @@ section.advantages ul {
     padding: 0;
 }
 
-.adv-icon {
+.adv-icon-div {
+    display: flex;
     width: 264px;
     height: 112px;
     padding-top: 24px;
@@ -271,12 +286,11 @@ section.advantages ul {
     padding-left: 100px;
     padding-right: 100px;
     background-color: var(--soft-white);
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
- .adv-svg-icon {
-    width: 64x;
-    height: 64px;
- }
+
 /*----works----*/
 .works {
     padding-bottom: 120px;
@@ -305,20 +319,17 @@ section.advantages ul {
 /*---team-----*/
 
 .team {
-    background-color: var(--soft-white);
-    
-     
+    background-color: var(--soft-white)   
 
-}
-.team .container {
-    
 }
 
 .team .persons {
     background-color: var(--pure-wite);
     display: block;
 
-
+border-radius: 4px;
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08);
+    
 }
 
 .team .persons:not(:last-child) {
@@ -328,8 +339,9 @@ section.advantages ul {
 
 .team ul.list {
     display: flex;
-
- 
+    gap: 24px; 
+    align-items: center;
+    justify-content: center;
 }
 
 .team-title {
@@ -362,6 +374,33 @@ section.advantages ul {
     padding: 0;
 }
 
+
+.persons-soc-list {
+    display: flex;
+    justify-content: center;
+   
+    gap: 24px;
+}
+
+.persons-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.persons-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.persons-soc-link:hover,
+.persons-soc-link:focus {
+    background: var(--green);
+}
+
 .team-text {
     color: var(--primary-text-color);
     font-size: 16px;
@@ -370,37 +409,48 @@ section.advantages ul {
 
     margin-bottom: 8px;
     padding: 0;
-}
-.div-sm-icons {
-    display: flex;
-    gap: 24px;
     
 }
 
-.sm-icons {
-    width: 40px;
-    height: 40px;
-    background-color: var(--blue);
-    border-radius: 50%;
-    display: block;
+.icon-customers-list {
+    display: flex;
     align-items: center;
     justify-content: center;
-
+    gap: 24px;
 }
 
-.icon-cus-svg use{
-    position: absolute;
-        left: 30.77%;
-        right: 29.81%;
-        top: 12.5%;
-        bottom: 3.63%;
+.icon-customers {
+   
+    
+    
 }
-.div-cus {
+.icon-customers:hover {
+    border: 1px solid var(--blue);
+}
+.icon-cus-svg {
+    fill: var(--icon-cust);
     width: 168px;
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--icon-cust);
     border-radius: 4px;
+    width: 168px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
 }
-
+.icon-cus-svg:hover,
+.icon-cus-svg:focus {
+    fill: var(--blue);
+    border: 1px solid var(--blue);
+   
+}
+.xxx {
+    
+}
+.xxx:hover {
+    fill: var(--blue);
+}
 .footer {
     background-color: var(--accent-text-color);
     padding: 100px 0 100px 0;
@@ -417,15 +467,11 @@ section.advantages ul {
     
     margin-bottom: 16px;
     display: block;
-
-
-
 }
 
 .f-cont {
     width: 264px;
-    
-    
+   
 }
 
 
@@ -433,15 +479,35 @@ section.advantages ul {
     color: var(--footer-text);
     font-weight: 400;
     font-size: 16px;
-    
-     
+    line-height: 1.e;
+}
+.footer-smtext {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em; 
+    margin-bottom: 16px;
+    color: var(--pure-wite);
 
 }
-
+.div-sm-footer {
+    width: 208px;
+    height: 80px;
+}
 .logo-studio-footer {
     color: var(--soft-white);
 }
+.list-persons-sm {
+display: flex;
+justify-content: center;
+gap: 16px;
 
+}
+.footer-main {
+    display: flex;
+    gap: 120px;
+}
 /*-----button---*/
 .button {
     color: var(--pure-wite);
@@ -449,7 +515,8 @@ section.advantages ul {
     cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus  {
     color: var(--accent);
     background-color: var(--soft-white);
 
@@ -501,6 +568,7 @@ ul.nav-port {
 .nav-button:focus {
     color: var(--pure-wite);
     background-color: var(--blue);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 1px rgba(0, 0, 0, 0.08);
 }
 
 div .gallery-container {
@@ -527,11 +595,8 @@ padding-right: 15px;
 
 }
 
-li.li-port {
-   
-}
 
-div.card-thumb {}
+
 
 .sec-descr {
     border-bottom: 1px solid var(--soft-white);
@@ -570,4 +635,12 @@ img {
     margin: 0;
     padding: 0;
     
+}
+.link-port {
+    display: block;
+}
+
+.link-port:hover,
+.link-port:focus {
+box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16);
 }
